@@ -1,0 +1,36 @@
+{
+  "name": "browserify-through",
+  "version": "0.5.0",
+  "description": "Handy dandy helper to assist you writing with Browserify transforms.",
+  "keywords": ["browserify", "transform"],
+  "homepage": "https://github.com/alexgorbatchev/browserify-through",
+  "bugs": "https://github.com/alexgorbatchev/browserify-through/issues",
+  "author": {
+    "name": "Alex Gorbatchev",
+    "url": "https://github.com/alexgorbatchev"
+  },
+  "main": "./lib/browserify-through.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexgorbatchev/browserify-through.git"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/*.spec.coffee",
+    "pretest": "./node_modules/.bin/coffee --bare --output ./lib --compile ./src/*.coffee"
+  },
+  "dependencies": {
+    "through": "^2.3.4"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.7.1",
+    "coffee-errors": "^0.8.5",
+    "mocha": "^1.18.2",
+    "chai": "^1.9.1",
+    "browserify": "^3.44.2"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=1.2.10"
+  },
+  "license": "MIT"
+}
