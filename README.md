@@ -4,7 +4,7 @@
 [![devDependency Status](https://david-dm.org/alexgorbatchev/browserify-through/dev-status.svg)](https://david-dm.org/alexgorbatchev/browserify-through#info=devDependencies)
 [![Build Status](https://secure.travis-ci.org/alexgorbatchev/browserify-through.svg?branch=master)](https://travis-ci.org/alexgorbatchev/browserify-through)
 
-[![NPM](https://nodei.co/npm/browserify-through.png?downloads=true)](https://npmjs.org/package/browserify-through)
+[![NPM](https://nodei.co/npm/browserify-through.svg?downloads=true)](https://npmjs.org/package/browserify-through)
 
 Handy dandy helper to assist you writing with Browserify transforms.
 
