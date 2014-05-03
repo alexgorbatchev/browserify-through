@@ -1,8 +1,8 @@
 # browserify-through
 
-[![Dependency status](https://david-dm.org/alexgorbatchev/browserify-through.png)](https://david-dm.org/alexgorbatchev/browserify-through)
-[![devDependency Status](https://david-dm.org/alexgorbatchev/browserify-through/dev-status.png)](https://david-dm.org/alexgorbatchev/browserify-through#info=devDependencies)
-[![Build Status](https://secure.travis-ci.org/alexgorbatchev/browserify-through.png?branch=master)](https://travis-ci.org/alexgorbatchev/browserify-through)
+[![Dependency status](https://david-dm.org/alexgorbatchev/browserify-through.svg)](https://david-dm.org/alexgorbatchev/browserify-through)
+[![devDependency Status](https://david-dm.org/alexgorbatchev/browserify-through/dev-status.svg)](https://david-dm.org/alexgorbatchev/browserify-through#info=devDependencies)
+[![Build Status](https://secure.travis-ci.org/alexgorbatchev/browserify-through.svg?branch=master)](https://travis-ci.org/alexgorbatchev/browserify-through)
 
 [![NPM](https://nodei.co/npm/browserify-through.png?downloads=true)](https://npmjs.org/package/browserify-through)
 
