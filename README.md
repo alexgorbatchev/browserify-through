@@ -31,6 +31,13 @@ bundler.transform(through({
 }));
 ```
 
+## API
+
+### through({opts})
+
+* `opts.map` - `function(filepath, data, [callback])` - Function should either return final data or call `callback(err, data)`.
+* `opts.filter` - `function(filepath)` - If `filter` function returns `true` for a givel `filepath`, the content will be passed to the `map` function. It's much more efficient to do this step separately from the `map` function because if you want to just ignore the file, it will be passed through without being stored in a variable.
+
 ## Testing
 
     npm test
