@@ -1,8 +1,11 @@
 {
   "name": "browserify-through",
-  "version": "0.5.0",
+  "version": "1.0.1",
   "description": "Handy dandy helper to assist you with writing Browserify transforms.",
-  "keywords": ["browserify", "transform"],
+  "keywords": [
+    "browserify",
+    "transform"
+  ],
   "homepage": "https://github.com/alexgorbatchev/browserify-through",
   "bugs": "https://github.com/alexgorbatchev/browserify-through/issues",
   "author": {
