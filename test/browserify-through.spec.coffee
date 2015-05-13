@@ -1,5 +1,3 @@
-require 'coffee-errors'
-
 chai = require 'chai'
 browserify = require 'browserify'
 # using compiled JavaScript file here to be sure module works
