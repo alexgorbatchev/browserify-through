@@ -14,19 +14,49 @@ Handy dandy helper to assist you with writing Browserify transforms.
 
 ## Usage Example
 
+### Via package.json
+
+```javascript
+{
+  "name": "fixtures",
+  "version": "1.0.0",
+  "browserify": {
+    "transform": [
+      ["./transform", {"token": "__token__"}]
+    ]
+  }
+}
 ```
-var browserify = require('through');
+
+```javascript
+var through = require('browserify-through');
+
+module.exports = through({
+  map: function (filepath, opts, data, done) {
+    done(null, data.replace(opts.token, '__new_token__'));
+  },
+
+  filter: function (filepath, opts) {
+    return /\.js$/.test(filepath);
+  }
+});
+```
+
+### Via Browserify API
+
+```javascript
+var browserify = require('browserify');
 var through = require('browserify-through');
 var bundler = browserify('./src/index.js');
 
 bundler.transform(through({
-  map: (filepath, data, done) {
+  map: function (filepath, opts, data, done) {
     done(null, data.replace(/foo/, 'bar'));
   },
 
   // optional filter
-  filter: (filepath) {
-    return /^\.js$/.test(filepath);
+  filter: function (filepath, opts) {
+    return /\.js$/.test(filepath);
   }
 }));
 ```
@@ -35,8 +65,8 @@ bundler.transform(through({
 
 ### through({opts})
 
-* `opts.map` - `function(filepath, data, [callback])` - Function should either return final data or call `callback(err, data)`.
-* `opts.filter` - `function(filepath)` - If `filter` function returns `true` for a givel `filepath`, the content will be passed to the `map` function. It's much more efficient to do this step separately from the `map` function because if you want to just ignore the file, it will be passed through without being stored in memory to be passed into `map`.
+* `opts.map` - `function(filepath, opts, data, [callback])` - Function should either return final data or call `callback(err, data)`. `opts` are passed via `package.json`.
+* `opts.filter` - `function(filepath, opts)` - If `filter` function returns `true` for a givel `filepath`, the content will be passed to the `map` function. It's much more efficient to do this step separately from the `map` function because if you want to just ignore the file, it will be passed through without being stored in memory to be passed into `map`. `opts` are passed via `package.json`.
 
 ## Testing
 

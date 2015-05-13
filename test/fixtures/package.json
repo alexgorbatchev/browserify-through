@@ -1,0 +1,9 @@
+{
+  "name": "fixtures",
+  "version": "1.0.0",
+  "browserify": {
+    "transform": [
+      ["./transform", {"token": "__token__", "ext": "\\.js$"}]
+    ]
+  }
+}
