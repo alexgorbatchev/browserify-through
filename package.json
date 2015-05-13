@@ -1,6 +1,6 @@
 {
   "name": "browserify-through",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Handy dandy helper to assist you with writing Browserify transforms.",
   "keywords": [
     "browserify",
